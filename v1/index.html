@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>klix -phone expert</title>
+  </head>
+  <body>
+    <nav id="overlay">
+      <img
+        src="icons/back_white.svg"
+        alt="close button"
+        class="close-btn"
+        id="close-menu"
+      />
+      <ul>
+        <li>
+          <a href="#">home</a>
+          <span>ceva</span>
+        </li>
+        <li>
+          <a href="#">servicii</a>
+          <span>ceva</span>
+        </li>
+        <li>
+          <a href="#">contact</a>
+          <span>ceva</span>
+        </li>
+      </ul>
+    </nav>
+    <header>
+      <a href="#" class="logo">bun venit!</a>
+      <img
+        src="icons/menu.svg"
+        alt="menu button"
+        class="menu-btn"
+        id="open-menu"
+      />
+    </header>
+    <section>
+      <p>klix.ro</p>
+    </section>
+    <script>
+      const overlay = document.getElementById("overlay");
+      const closeMenu = document.getElementById("close-menu");
+
+      document
+        .getElementById("open-menu")
+        .addEventListener("click", function() {
+          overlay.classList.add("show-menu");
+          overlay.classList.remove("hide-menu");
+        });
+
+      document
+        .getElementById("close-menu")
+        .addEventListener("click", function() {
+          overlay.classList.add("hide-menu");
+          overlay.classList.remove("show-menu");
+        });
+    </script>
+  </body>
+</html>
